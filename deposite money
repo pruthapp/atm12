@@ -1,0 +1,57 @@
+void DepositMoneyInAccount() {
+ 
+    int UserInputOption = -1;
+    bool isNotFinished = true;
+    long depositAmount = 0;
+ 
+    do {
+ 
+        cout << "Cash Deposit Options. Please Enter Your Selection" << endl;
+        cout << "1 - $20" << endl;
+        cout << "2 - $40" << endl;
+        cout << "3 - $60" << endl;
+        cout << "4 - $100" << endl;
+        cout << "5 - $200" << endl;
+        cout << "6 - cancel transaction" << endl;
+        cout << "7 - Custom Amount" << endl;
+        cout << "Choose a deposit option (1-7)" << endl;
+ 
+        cin >> UserInputOption;
+        switch (UserInputOption) {
+        case 1:
+            AccountBalance = AccountBalance + 20;
+            isNotFinished = false;
+            break;
+        case 2:
+            AccountBalance = AccountBalance + 40;
+            isNotFinished = false;
+            break;
+        case 3:
+            AccountBalance = AccountBalance + 60;
+            isNotFinished = false;
+            break;
+        case 4:
+            AccountBalance = AccountBalance + 100;
+            isNotFinished = false;
+            break;
+        case 5:
+            AccountBalance = AccountBalance + 200;
+            isNotFinished = false;
+            break;
+        case 6:
+            isNotFinished = false;
+            break;
+        case 7:
+            cout << "Please Enter Amount to Deposit:" << endl;
+            cin >> depositAmount;
+            AccountBalance = AccountBalance + depositAmount;
+            isNotFinished = false;
+            break;
+        default:
+            cout << "Invalid option! Try again." << endl;
+            break;
+        }
+ 
+    } while (isNotFinished);
+ 
+}
