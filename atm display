@@ -1,0 +1,15 @@
+int DisplayMenu() {
+ 
+    int UserInputOption = -1;
+ 
+    cout << "Welcome to Your Account!! Please choose Option to Proceed" << endl;
+    cout << "    1 - View Your Account balance" << endl;
+    cout << "    2 - Withdraw Cash" << endl;
+    cout << "    3 - Deposit Cash" << endl;
+    cout << "    4 - Exit" << endl;
+    cout << "Enter an Option to Proceed: " << endl;
+    cin >> UserInputOption;
+ 
+    return UserInputOption;
+ 
+}
